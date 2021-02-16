@@ -1,7 +1,7 @@
 import './style.css'
-import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import * as THREE from './buld/three.module.js'
+import { OrbitControls } from '../OrbitControls.js'
+import { GLTFLoader } from '..//GLTFLoader.js'
 import fontfile from './fonts/font2.json'
 import fontfile2 from './fonts/font.json'
 
