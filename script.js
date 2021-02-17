@@ -45,11 +45,12 @@ const geometry = new THREE.TextGeometry( 'Happy Birthday!', {
 const material = new THREE.MeshBasicMaterial({color: 0xfc0320});
 const textGeo = new THREE.Mesh(geometry, material); 
 scene.add(textGeo)
+    
+textGeo.position.y = 15
+textGeo.position.x = -12.5
 }, undefined, function (error) {
     console.error(error)
 })
-textGeo.position.y = 15
-textGeo.position.x = -12.5
 
 const font = fontLoader.load('./fonts/font.json', function (font) {
 const geometry2 = new THREE.TextGeometry( 'Arnav', {
@@ -61,11 +62,12 @@ const geometry2 = new THREE.TextGeometry( 'Arnav', {
 const material2 = new THREE.MeshBasicMaterial({color: 0xfc0320});
 const textGeo2 = new THREE.Mesh(geometry2, material2); 
 scene.add(textGeo2)
+textGeo2.position.y = 12
+textGeo2.position.x = -3
 }, undefined, function (error) {
     console.error(error)
 })
-textGeo2.position.y = 12
-textGeo2.position.x = -3
+
 
 const loader = new GLTFLoader()
 loader.load('Cake_01.gltf', function (gltf) {
