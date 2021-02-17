@@ -2,8 +2,8 @@
 import * as THREE from './build/three.module.js'
 //import { OrbitControls } from './OrbitControls.js'
 //import { GLTFLoader } from './GLTFLoader.js'
-import fontfile from './fonts/font2.json'
-import fontfile2 from './fonts/font.json'
+//import fontfile from './fonts/font2.json'
+//import fontfile2 from './fonts/font.json'
 
 /**
  * Base
@@ -35,7 +35,7 @@ scene.background = new THREE.Color(0x0059ff)
 
 const fontLoader = new THREE.FontLoader();
 
-const font2 = fontLoader.parse(fontfile)
+const font2 = fontLoader.load('./fonts/font2.json', function (font2) {
 const geometry = new THREE.TextGeometry( 'Happy Birthday!', {
     font: font2,
     size: 2,
@@ -45,11 +45,13 @@ const geometry = new THREE.TextGeometry( 'Happy Birthday!', {
 const material = new THREE.MeshBasicMaterial({color: 0xfc0320});
 const textGeo = new THREE.Mesh(geometry, material); 
 scene.add(textGeo)
-
+}, undefined, function (error) {
+    console.error(error)
+})
 textGeo.position.y = 15
 textGeo.position.x = -12.5
 
-const font = fontLoader.parse(fontfile2)
+const font = fontLoader.load('./fonts/font.json', function (font) {
 const geometry2 = new THREE.TextGeometry( 'Arnav', {
     font: font,
     size: 2,
@@ -59,7 +61,9 @@ const geometry2 = new THREE.TextGeometry( 'Arnav', {
 const material2 = new THREE.MeshBasicMaterial({color: 0xfc0320});
 const textGeo2 = new THREE.Mesh(geometry2, material2); 
 scene.add(textGeo2)
-
+}, undefined, function (error) {
+    console.error(error)
+})
 textGeo2.position.y = 12
 textGeo2.position.x = -3
 
