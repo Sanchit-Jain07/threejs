@@ -9,6 +9,8 @@ import { GLTFLoader } from './GLTFLoader.js'
  * Base
  */
 // Canvas
+
+// HELLO
 const canvas = document.querySelector('canvas.webgl')
 
 // Sizes
