@@ -36,7 +36,7 @@ scene.background = new THREE.Color(0x0059ff)
 const fontLoader = new THREE.FontLoader();
 
 const font2 = fontLoader.load('./fonts/font2.json', function (font2) {
-const geometry = new THREE.TextGeometry( 'Happy Birthday Deadend!!', {
+const geometry = new THREE.TextGeometry( 'Happy Birthday!!', {
     font: font2,
     size: 2,
     height: 1,
@@ -53,7 +53,7 @@ textGeo.position.x = -12.5
 })
 
 const font = fontLoader.load('./fonts/font.json', function (font) {
-const geometry2 = new THREE.TextGeometry( 'Arnav', {
+const geometry2 = new THREE.TextGeometry( 'DEADEND', {
     font: font,
     size: 2,
     height: 1,
