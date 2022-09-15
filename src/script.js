@@ -50,7 +50,7 @@ textGeo.position.y = 15
 textGeo.position.x = -12.5
 
 const font = fontLoader.parse(fontfile2)
-const geometry2 = new THREE.TextGeometry( 'Arnav', {
+const geometry2 = new THREE.TextGeometry( 'DEADEND', {
     font: font,
     size: 2,
     height: 1,
